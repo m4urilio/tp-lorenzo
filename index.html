@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorenzo Sevieri – Marca Pessoal para Médicos</title>
+  <meta name="description" content="Retratos estratégicos e marca pessoal para médicos que querem ser percebidos como referência." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- BLOB BG -->
+  <div class="blob blob--1" aria-hidden="true"></div>
+  <div class="blob blob--2" aria-hidden="true"></div>
+
+  <main class="page">
+
+    <!-- LOGO / BRAND -->
+    <header class="brand" data-reveal>
+      <span class="brand__name">Lorenzo Sevieri</span>
+      <span class="brand__tag">Marca Pessoal para Médicos</span>
+    </header>
+
+    <!-- HEADLINE -->
+    <section class="hero" data-reveal data-reveal-delay="1">
+      <div class="badge">
+        <span class="badge__dot"></span>
+        Especialista · Marca Pessoal para Médicos
+      </div>
+
+      <h1 class="hero__headline">
+        Médicos que<br />
+        <span class="text-teal">lideram</span> não<br />
+        deixam sua<br />
+        <em>imagem ao acaso.</em>
+      </h1>
+
+      <p class="hero__sub">
+        Lorenzo Sevieri cria narrativa, direção visual e retratos estratégicos para profissionais da saúde que querem ser percebidos como referência.
+      </p>
+    </section>
+
+    <!-- PILLS -->
+    <div class="pills" data-reveal data-reveal-delay="2">
+      <span class="pill"><i class="fa-solid fa-shield-halved"></i> Autoridade</span>
+      <span class="pill"><i class="fa-solid fa-eye"></i> Presença</span>
+      <span class="pill"><i class="fa-solid fa-award"></i> Confiança</span>
+      <span class="pill"><i class="fa-solid fa-fingerprint"></i> Marca Pessoal</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta" data-reveal data-reveal-delay="3">
+      <a
+        href="https://wa.me/5511997230847?text=Olá%20Lorenzo,%20quero%20saber%20mais%20sobre%20marca%20pessoal%20para%20médicos"
+        target="_blank"
+        class="btn-wa"
+        id="cta-btn"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        Falar com Lorenzo no WhatsApp
+      </a>
+      <p class="cta__note">
+        <i class="fa-solid fa-lock"></i>
+        Resposta rápida · Sem compromisso
+      </p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats" data-reveal data-reveal-delay="4">
+      <div class="stat">
+        <strong>+200</strong>
+        <span>Médicos atendidos</span>
+      </div>
+      <div class="stat__sep"></div>
+      <div class="stat">
+        <strong>100%</strong>
+        <span>Foco em saúde</span>
+      </div>
+      <div class="stat__sep"></div>
+      <div class="stat">
+        <strong>4.9★</strong>
+        <span>Google</span>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="foot" data-reveal data-reveal-delay="4">
+      <a href="https://instagram.com/sevierilorenzofotografia" target="_blank" class="foot__ig">
+        <i class="fa-brands fa-instagram"></i>
+        @sevierilorenzofotografia
+      </a>
+      <span class="foot__copy">© 2025 Lorenzo Sevieri · Sevieri Fotografia</span>
+    </footer>
+
+  </main>
+
+  <!-- FLOATING WA -->
+  <a href="https://wa.me/5511997230847?text=Olá%20Lorenzo,%20quero%20saber%20mais%20sobre%20marca%20pessoal%20para%20médicos" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    // Scroll reveal
+    const els = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    els.forEach(el => io.observe(el));
+
+    // Button pulse on click
+    document.getElementById('cta-btn').addEventListener('click', function() {
+      this.classList.add('clicked');
+      setTimeout(() => this.classList.remove('clicked'), 600);
+    });
+  </script>
+</body>
+</html>
